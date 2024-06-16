@@ -1,12 +1,13 @@
+
 import './App.css'
+import { Dashboard } from './Pages/Dashboard/Dashboard';
 
 function App() {
 
-
   return (
-    <>
-      <div>hello world!</div>
-    </>
+    <div className='stylish-regular'>
+      <Dashboard />
+    </div>
   )
 }
 
