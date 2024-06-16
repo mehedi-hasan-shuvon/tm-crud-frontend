@@ -1,0 +1,29 @@
+.task-card {
+	transition: transform 0.3s ease-in-out;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add box-shadow for depth */
+  
+	/* Styling on hover */
+	&:hover {
+	  transform: translateY(-5px);
+	  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Lift effect with stronger shadow */
+	}
+  }
+  
+  .card-body {
+	padding: 20px;
+  }
+  
+  .card-title {
+	font-weight: 700;
+	font-size: 25px; /* Increase font size */
+	margin-bottom: 10px; /* Add spacing below title */
+  }
+  
+  .card-text {
+	font-size: 25px; /* Increase font size for count */
+	font-weight: 4700;
+	color: #000000; /* Example: Adjust text color */
+  }
+  
