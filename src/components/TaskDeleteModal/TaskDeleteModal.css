@@ -1,0 +1,25 @@
+/* TaskDeleteModal.css */
+.custom-modal-content {
+	border-radius: 10px;
+	overflow: hidden;
+  }
+  
+  .custom-modal-header {
+	background-color: #dc3545;
+	color: white;
+	padding: 1rem;
+  }
+  
+  .custom-modal-body {
+	padding: 1.5rem;
+  }
+  
+  .custom-modal-footer {
+	padding: 1rem;
+	border-top: 1px solid #dee2e6;
+  }
+  
+  .custom-modal-footer .btn {
+	margin-right: 10px;
+  }
+  

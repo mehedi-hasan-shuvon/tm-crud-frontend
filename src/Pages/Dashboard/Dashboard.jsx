@@ -5,14 +5,18 @@ import { fetchTaskList } from "../../api/dashboard";
 
 export const Dashboard = () => {
 	const [taskList, setTaskList] = useState([]);
+	const [isUpdated, setIsUpdated] = useState(false);
+
+	const [isLoading, setIsLoading] = useState(false);
 
 
 	const fetchTask = async () => {
 		try{
+			setIsLoading(true);
 			const response = await fetchTaskList();
 
 			setTaskList(response.tasks);
-
+			setIsLoading(false);
 
 		}catch(err){
 			console.log("Error while fetching task list")
@@ -22,12 +26,12 @@ export const Dashboard = () => {
 	useEffect(() => {
 		fetchTask();
 		
-	},[])
+	},[isUpdated])
 
   return (
-	<div>
+	<div className="container-fluid dashboard"> 
 		<Header taskList={taskList}/>
-		<Tasklist />
+		<Tasklist taskList={taskList} isUpdated={isUpdated} setIsUpdated={setIsUpdated} isLoading={isLoading}/>
 	</div>
   )
 }

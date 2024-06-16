@@ -69,7 +69,7 @@ export const updateTask = async (updatedTask) => {
 
 export const deleteTask = async (taskId) => {
 	try {
-		const response = await axios.delete(base_url + "/tasksDelete/" + taskId);
+		const response = await axios.delete(base_url + "/delete-task/" + taskId);
 		if (response.status === 200) {
 			return response.data;
 		} else {
